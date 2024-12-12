@@ -1,24 +1,13 @@
 import styles from "./App.module.scss";
 
-const MENU = [
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "Products",
-    link: "/products",
-  },
-];
+const isAuth = true; /*or true*/
 
 export function App() {
   return (
     <div className={styles.layout}>
       <img src="./Naruto.jpg" alt="1" width={150} height={200} />
 
-      {MENU.map((item) => (
-        <span key={item.link}>{item.name}</span>
-      ))}
+      {isAuth ? "Авторизирован" : "Войдите в систему"}
 
       <h1>The first component</h1>
       <div>Hello everybody!</div>
